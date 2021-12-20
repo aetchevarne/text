@@ -229,9 +229,9 @@ namespace boost { namespace text {
                     Key,
                     Value,
                     KeySize>> const & child,
-                std::ptrdiff_t offset,
-                Iter it,
-                Iter end) noexcept
+                std::ptrdiff_t /*offset*/,
+                Iter /*it*/,
+                Iter /*end*/) noexcept
             {}
 
             template<typename Key, typename Value, std::size_t KeySize>

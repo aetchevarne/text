@@ -128,7 +128,7 @@ namespace boost { namespace text {
         }
         template<typename ResultType>
         constexpr auto
-        make_iter(ResultType first, ResultType it, ResultType last) noexcept
+        make_iter(ResultType first, ResultType it, ResultType /*last*/) noexcept
             -> decltype(ResultType(it))
         {
             return it;
