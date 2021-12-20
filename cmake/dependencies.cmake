@@ -80,7 +80,7 @@ endif ()
 ###############################################################################
 # GoogleTest
 ###############################################################################
-add_subdirectory(${CMAKE_SOURCE_DIR}/googletest-release-1.8.0)
+add_subdirectory(${PROJECT_SOURCE_DIR}/googletest-release-1.8.0)
 target_include_directories(gtest      INTERFACE ${CMAKE_HOME_DIRECTORY}/googletest-release-1.8.0/googletest/include)
 target_include_directories(gtest_main INTERFACE ${CMAKE_HOME_DIRECTORY}/googletest-release-1.8.0/googletest/include)
 
@@ -88,7 +88,7 @@ target_include_directories(gtest_main INTERFACE ${CMAKE_HOME_DIRECTORY}/googlete
 ###############################################################################
 # Google Benchmark
 ###############################################################################
-add_subdirectory(${CMAKE_SOURCE_DIR}/benchmark-v1.2.0)
+add_subdirectory(${PROJECT_SOURCE_DIR}/benchmark-v1.2.0)
 
 
 ###############################################################################
