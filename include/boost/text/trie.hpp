@@ -228,7 +228,7 @@ namespace boost { namespace text {
                     no_index_within_parent_t,
                     Key,
                     Value,
-                    KeySize>> const & child,
+                KeySize>> const & /*child*/,
                 std::ptrdiff_t /*offset*/,
                 Iter /*it*/,
                 Iter /*end*/) noexcept
@@ -239,11 +239,11 @@ namespace boost { namespace text {
                                 no_index_within_parent_t,
                                 Key,
                                 Value,
-                                KeySize>> const & child) noexcept
+                                KeySize>> const & /*child*/) noexcept
             {}
 
             template<typename Iter>
-            void erase(Iter it, Iter end) noexcept
+            void erase(Iter /*it*/, Iter /*end*/) noexcept
             {}
         };
 
@@ -1023,7 +1023,7 @@ namespace boost { namespace text {
             template<typename Compare>
             iterator insert(
                 key_element const & e,
-                Compare const & comp,
+                Compare const & /*comp*/,
                 std::unique_ptr<trie_node_t> && child)
             {
                 if (children_.empty())

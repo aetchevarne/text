@@ -43,7 +43,7 @@ namespace boost { namespace text {
         {
             uint32_t lo_;
             uint32_t hi_;
-            grapheme_property prop_;
+            grapheme_property prop_ = {};
         };
 
         inline bool operator<(

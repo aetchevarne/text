@@ -26,7 +26,7 @@ namespace boost { namespace text {
     struct tailoring_error : std::exception
     {
         tailoring_error(string_view msg) : msg_(msg) {}
-        char const * what() const noexcept { return msg_.c_str(); }
+        char const * what() const noexcept override { return msg_.c_str(); }
 
     private:
         std::string msg_;
@@ -40,7 +40,7 @@ namespace boost { namespace text {
             line_(line),
             column_(column)
         {}
-        char const * what() const noexcept { return msg_.c_str(); }
+        char const * what() const noexcept override { return msg_.c_str(); }
         int line() const { return line_; }
         int column() const { return column_; }
 
@@ -126,7 +126,7 @@ namespace boost { namespace text {
         {
             token_kind op_;
             cp_seq_t cps_;
-            prefix_and_extension_t prefix_and_extension_;
+            prefix_and_extension_t prefix_and_extension_ = {};
         };
 
         using reset_callback =

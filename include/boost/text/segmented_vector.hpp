@@ -347,7 +347,7 @@ namespace boost { namespace text {
             explicit operator bool() const { return seg_ != nullptr; }
 
             segment_type * seg_;
-            detail::found_leaf<T, Segment> found_;
+            detail::found_leaf<T, Segment> found_ = {};
         };
 
         seg_insertion mutable_insertion_leaf(

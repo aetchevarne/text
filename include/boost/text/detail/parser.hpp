@@ -92,7 +92,7 @@ namespace boost { namespace text { namespace detail {
             ++it;
         return retval;
     }
-    inline bool require_impl(token_iter & it, token_iter end) { return true; }
+    inline bool require_impl(token_iter & /*it*/, token_iter /*end*/) { return true; }
     template<typename T, typename... Ts>
     inline bool require_impl(token_iter & it, token_iter end, T t, Ts... ts)
     {

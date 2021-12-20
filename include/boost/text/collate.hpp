@@ -127,8 +127,8 @@ namespace boost { namespace text {
         inline OutIter add_derived_elements(
             uint32_t cp,
             OutIter out,
-            detail::collation_trie_t const & trie,
-            collation_element const * collation_elements_first,
+            detail::collation_trie_t const & /*trie*/,
+            collation_element const * /* collation_elements_first*/,
             LeadByteFunc const & lead_byte)
         {
             // Core Han Unified Ideographs
@@ -256,10 +256,10 @@ namespace boost { namespace text {
         inline bool s2_3(
             CEIter first,
             CEIter last,
-            collation_strength strength,
-            variable_weighting weighting,
+            collation_strength /*strength*/,
+            variable_weighting /*weighting*/,
             bool after_variable,
-            retain_case_bits_t retain_case_bits)
+            retain_case_bits_t /*retain_case_bits*/)
         {
             // http://www.unicode.org/reports/tr10/#Implicit_Weights says: "If
             // a fourth or higher weights are used, then the same pattern is
@@ -719,14 +719,14 @@ namespace boost { namespace text {
         auto
         s3(CEIter ces_first,
            CEIter ces_last,
-           int ces_size,
+           int /*ces_size*/,
            collation_strength strength,
            case_first case_1st,
            case_level case_lvl,
            l2_weight_order l2_order,
            CPIter cps_first,
            Sentinel cps_last,
-           int cps_size,
+           int /*cps_size*/,
            Container & bytes) -> detail::cp_iter_ret_t<void, CPIter>
         {
             level_sort_key_values_t l1;

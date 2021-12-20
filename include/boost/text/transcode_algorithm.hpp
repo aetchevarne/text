@@ -140,13 +140,13 @@ namespace boost { namespace text {
         }
 
         inline int32_t *
-        sse_out_ptr(int32_t * out, std::array<int32_t, 16> & tmp)
+        sse_out_ptr(int32_t * out, std::array<int32_t, 16> & /*tmp*/)
         {
             return out;
         }
 
         inline int32_t *
-        sse_out_ptr(uint32_t * out, std::array<int32_t, 16> & tmp)
+        sse_out_ptr(uint32_t * out, std::array<int32_t, 16> & /*tmp*/)
         {
             return (int32_t *)out;
         }
@@ -159,13 +159,13 @@ namespace boost { namespace text {
         }
 
         inline void finalize_sse_out(
-            int32_t *& out, std::array<int32_t, 16> const & tmp, int incr)
+            int32_t *& out, std::array<int32_t, 16> const & /*tmp*/, int incr)
         {
             out += incr;
         }
 
         inline void finalize_sse_out(
-            uint32_t *& out, std::array<int32_t, 16> const & tmp, int incr)
+            uint32_t *& out, std::array<int32_t, 16> const & /*tmp*/, int incr)
         {
             out += incr;
         }
