@@ -137,6 +137,6 @@ endif ()
 
 # See above for editor example.
 
-add_subdirectory(test)
-add_subdirectory(perf)
-add_subdirectory(example)
+#add_subdirectory(test)
+#add_subdirectory(perf)
+#add_subdirectory(example)
