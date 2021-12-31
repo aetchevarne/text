@@ -45,7 +45,7 @@ namespace boost { namespace text { namespace detail {
 
         uint16_t get_norm16(int32_t c) const noexcept
         {
-            return ((c & 0xfffffc00) == 0xd800) ? (uint16_t)inert : trie.fast_get(c);
+            return ((c & 0xfffffc00) == 0xd800) ? static_cast<uint16_t>(inert) : trie.fast_get(c);
         }
 
         bool algorithmic_no_no(uint16_t norm16) const noexcept
